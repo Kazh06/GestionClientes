@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/BUSINESS/">
+    <Project Path="BUSINESS/GestionClientes.Business/GestionClientes.Business.vbproj" Id="d01714ee-7729-4f33-b4e8-df9b1c6a533f" />
+  </Folder>
+  <Folder Name="/DATA/">
+    <Project Path="DATA/GestionClientes.Data/GestionClientes.Data.vbproj" Id="3ddae663-868c-4999-b387-8da047ff9579" />
+  </Folder>
+  <Folder Name="/ENTITIES/">
+    <Project Path="ENTITIES/GestionClientes.Entities/GestionClientes.Entities.vbproj" Id="fe7324e9-416b-479b-a910-94468b188054" />
+  </Folder>
+  <Folder Name="/WEB/">
+    <Project Path="WEB/GestionClientes.Web/GestionClientes.Web.vbproj" Id="cd8e53d2-b177-494b-ae08-1ceef98e43d7" />
+  </Folder>
+</Solution>
