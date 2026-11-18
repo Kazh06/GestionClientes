@@ -47,6 +47,8 @@ INSERT INTO Usuarios (
     ContrasenaHash,
     NombreCompleto
 )
+-- Usuario: admin
+-- Contraseña: Admin123*
 VALUES (
     'admin',
     '0a5bc3e342432f1bad92ffd51b785343ec72906cdba6a26131060b008e786656',
