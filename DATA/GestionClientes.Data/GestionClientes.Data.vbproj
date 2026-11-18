@@ -74,6 +74,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\ClienteDAL.vb" />
+    <Compile Include="DAL\QueryableExtensions.vb" />
+    <Compile Include="DAL\UsuarioDAL.vb" />
+    <Compile Include="DB\GestionClientesContext.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -110,6 +114,12 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ENTITIES\GestionClientes.Entities\GestionClientes.Entities.vbproj">
+      <Project>{fe7324e9-416b-479b-a910-94468b188054}</Project>
+      <Name>GestionClientes.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

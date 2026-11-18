@@ -64,6 +64,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\ClienteBLL.vb" />
+    <Compile Include="BLL\UsuarioBLL.vb" />
+    <Compile Include="Helpers\SeguridadHelper.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -100,6 +103,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\DATA\GestionClientes.Data\GestionClientes.Data.vbproj">
+      <Project>{3ddae663-868c-4999-b387-8da047ff9579}</Project>
+      <Name>GestionClientes.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\ENTITIES\GestionClientes.Entities\GestionClientes.Entities.vbproj">
       <Project>{fe7324e9-416b-479b-a910-94468b188054}</Project>
       <Name>GestionClientes.Entities</Name>
