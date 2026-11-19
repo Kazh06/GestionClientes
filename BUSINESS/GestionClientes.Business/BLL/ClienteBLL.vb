@@ -6,12 +6,12 @@ Public Class ClienteBLL
 
     Private ReadOnly _clienteDal As New ClienteDAL()
 
-    Public Function ObtenerPaginado(paginaActual As Integer, tamanoPagina As Integer) As ResultadoPaginado(Of Cliente)
-        Return _clienteDal.ListarActivosPaginado(paginaActual, tamanoPagina)
+    Public Function ObtenerPaginado(paginaActual As Integer, tamanoPagina As Integer, Optional searchQuery As String = "") As ResultadoPaginado(Of Cliente)
+        Return _clienteDal.ListarActivosPaginado(paginaActual, tamanoPagina, searchQuery)
     End Function
 
-    Public Function ObtenerBitacoraPaginada(paginaActual As Integer, tamanoPagina As Integer) As ResultadoPaginado(Of Bitacora)
-        Return _clienteDal.ListarBitacoraPaginada(paginaActual, tamanoPagina)
+    Public Function ObtenerBitacoraPaginada(paginaActual As Integer, tamanoPagina As Integer, Optional searchQuery As String = "") As ResultadoPaginado(Of Bitacora)
+        Return _clienteDal.ListarBitacoraPaginada(paginaActual, tamanoPagina, searchQuery)
     End Function
 
     Public Function ObtenerPorId(idCliente As Integer) As Cliente

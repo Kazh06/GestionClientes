@@ -149,6 +149,33 @@ Partial Public Class Clientes
     Protected WithEvents btnCancelar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''Control txtBuscarCliente.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtBuscarCliente As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control btnBuscarCliente.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnBuscarCliente As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control btnLimpiarCliente.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnLimpiarCliente As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''Control gvClientes.
     '''</summary>
     '''<remarks>
@@ -156,6 +183,33 @@ Partial Public Class Clientes
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents gvClientes As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
+    '''Control txtBuscarBitacora.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtBuscarBitacora As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control btnBuscarBitacora.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnBuscarBitacora As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control btnLimpiarBitacora.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnLimpiarBitacora As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''Control gvBitacora.

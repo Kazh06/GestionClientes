@@ -2,18 +2,32 @@
 
 Public Class ClienteDAL
 
-    Public Function ListarActivosPaginado(paginaActual As Integer, tamanoPagina As Integer) As ResultadoPaginado(Of Cliente)
+    Public Function ListarActivosPaginado(paginaActual As Integer, tamanoPagina As Integer, Optional searchQuery As String = "") As ResultadoPaginado(Of Cliente)
         Using db As New GestionClientesContext()
-            Return db.Clientes _
-                     .Where(Function(c) c.Activo = True) _
-                     .OrderByDescending(Function(c) c.IdCliente) _
-                     .Paginar(paginaActual, tamanoPagina)
+            Dim consulta = db.Clientes.Where(Function(c) c.Activo = True)
+
+            If Not String.IsNullOrWhiteSpace(searchQuery) Then
+                Dim termino = searchQuery.Trim()
+                consulta = consulta.Where(Function(c) (c.Nombres + c.Apellidos).Trim().Contains(termino) OrElse
+                                                      (c.Correo IsNot Nothing AndAlso c.Correo.Contains(termino)))
+            End If
+
+            Return consulta _
+                .OrderByDescending(Function(c) c.IdCliente) _
+                .Paginar(paginaActual, tamanoPagina)
         End Using
     End Function
 
-    Public Function ListarBitacoraPaginada(paginaActual As Integer, tamanoPagina As Integer) As ResultadoPaginado(Of Bitacora)
+    Public Function ListarBitacoraPaginada(paginaActual As Integer, tamanoPagina As Integer, Optional searchQuery As String = "") As ResultadoPaginado(Of Bitacora)
         Using db As New GestionClientesContext()
-            Return db.Bitacora _
+            Dim consulta = db.Bitacora
+
+            If Not String.IsNullOrWhiteSpace(searchQuery) Then
+                Dim termino = searchQuery.Trim()
+                consulta = consulta.Where(Function(b) b.NombreUsuario.Contains(termino))
+            End If
+
+            Return consulta _
                      .OrderByDescending(Function(b) b.FechaHora) _
                      .Paginar(paginaActual, tamanoPagina)
         End Using

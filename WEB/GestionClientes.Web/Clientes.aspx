@@ -108,8 +108,13 @@
                 <div class="col-lg-8">
                     <!-- Tabla de Clientes -->
                     <div class="card shadow-sm border-0 mb-4">
-                        <div class="card-header bg-white fw-bold py-3">
-                            Clientes Registrados
+                        <div class="card-header bg-white py-3 d-flex flex-wrap justify-content-between align-items-center gap-2">
+                            <span class="fw-bold">Clientes Registrados</span>
+                            <div class="input-group input-group-sm" style="max-width: 340px;">
+                                <asp:TextBox ID="txtBuscarCliente" runat="server" CssClass="form-control" placeholder="Buscar por nombre, apellido o correo..."></asp:TextBox>
+                                <asp:Button ID="btnBuscarCliente" runat="server" Text="Buscar" CssClass="btn btn-primary" OnClick="btnBuscarCliente_Click" CausesValidation="false" />
+                                <asp:Button ID="btnLimpiarCliente" runat="server" Text="Limpiar" CssClass="btn btn-outline-secondary" OnClick="btnLimpiarCliente_Click" CausesValidation="false" />
+                            </div>
                         </div>
                         <div class="card-body p-0">
                             <div class="table-responsive">
@@ -150,8 +155,13 @@
 
                     <!-- Tabla de Bitácora -->
                     <div class="card shadow-sm border-0">
-                        <div class="card-header bg-white fw-bold py-3">
-                            Bitácora de Auditoría
+                        <div class="card-header bg-white py-3 d-flex flex-wrap justify-content-between align-items-center gap-2">
+                            <span class="fw-bold">Bitácora de Auditoría</span>
+                            <div class="input-group input-group-sm" style="max-width: 300px;">
+                                <asp:TextBox ID="txtBuscarBitacora" runat="server" CssClass="form-control" placeholder="Buscar por usuario..."></asp:TextBox>
+                                <asp:Button ID="btnBuscarBitacora" runat="server" Text="Buscar" CssClass="btn btn-primary" OnClick="btnBuscarBitacora_Click" CausesValidation="false" />
+                                <asp:Button ID="btnLimpiarBitacora" runat="server" Text="Limpiar" CssClass="btn btn-outline-secondary" OnClick="btnLimpiarBitacora_Click" CausesValidation="false" />
+                            </div>
                         </div>
                         <div class="card-body p-0">
                             <div class="table-responsive">

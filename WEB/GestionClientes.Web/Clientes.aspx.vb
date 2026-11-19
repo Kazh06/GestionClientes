@@ -25,15 +25,37 @@ Public Class Clientes
     End Sub
 
     Private Sub CargarDatos()
-        Dim resultadoClientes = _clienteBll.ObtenerPaginado(gvClientes.PageIndex, gvClientes.PageSize)
+        Dim resultadoClientes = _clienteBll.ObtenerPaginado(gvClientes.PageIndex, gvClientes.PageSize, txtBuscarCliente.Text)
         gvClientes.VirtualItemCount = resultadoClientes.TotalRegistros
         gvClientes.DataSource = resultadoClientes.Datos
         gvClientes.DataBind()
 
-        Dim resultadoBitacora = _clienteBll.ObtenerBitacoraPaginada(gvBitacora.PageIndex, gvBitacora.PageSize)
+        Dim resultadoBitacora = _clienteBll.ObtenerBitacoraPaginada(gvBitacora.PageIndex, gvBitacora.PageSize, txtBuscarBitacora.Text)
         gvBitacora.VirtualItemCount = resultadoBitacora.TotalRegistros
         gvBitacora.DataSource = resultadoBitacora.Datos
         gvBitacora.DataBind()
+    End Sub
+
+    Protected Sub btnBuscarCliente_Click(sender As Object, e As EventArgs)
+        gvClientes.PageIndex = 0
+        CargarDatos()
+    End Sub
+
+    Protected Sub btnLimpiarCliente_Click(sender As Object, e As EventArgs)
+        txtBuscarCliente.Text = String.Empty
+        gvClientes.PageIndex = 0
+        CargarDatos()
+    End Sub
+
+    Protected Sub btnBuscarBitacora_Click(sender As Object, e As EventArgs)
+        gvBitacora.PageIndex = 0
+        CargarDatos()
+    End Sub
+
+    Protected Sub btnLimpiarBitacora_Click(sender As Object, e As EventArgs)
+        txtBuscarBitacora.Text = String.Empty
+        gvBitacora.PageIndex = 0
+        CargarDatos()
     End Sub
 
     Protected Sub gvClientes_PageIndexChanging(sender As Object, e As GridViewPageEventArgs)
